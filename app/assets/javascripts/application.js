@@ -12,8 +12,12 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require foundation
 //= require angular
 //= require angular-route
+//= require angular-devise/devise
 //= require underscore
 //= require home
 //= require_tree .
+
+$(function(){ $(document).foundation(); });
