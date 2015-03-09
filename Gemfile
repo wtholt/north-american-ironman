@@ -37,6 +37,8 @@ gem 'angular_rails_csrf'
 
 gem "rails-assets-angular-devise"
 
+gem 'angular-ui-calendar-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
