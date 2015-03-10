@@ -26,7 +26,7 @@ heroku(deployment)
 
 ################################################
 DEVELOPMENT PROCESS
-################################################
+
 Friday March 6th - Monday March 9th
 ------------------------------------
 Made an idea about decision and concept of application
