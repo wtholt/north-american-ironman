@@ -1,0 +1,15 @@
+<h3>Group Info</h3>
+<a ng-click="groupIndex()">Back to Groups</a>
+<ul class='list-inline'>
+  <li ng-repeat="group in groups.groups">
+    {{ group.name }}
+    <br>
+    {{ group.info }}
+    <br>
+    {{ group.city}}
+    <br>
+    {{ group.state }}
+    <br>
+    {{ group.zip }}
+  </li>
+</ul>

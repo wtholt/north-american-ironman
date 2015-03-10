@@ -1,28 +1,50 @@
-== README
+Final Project - Calendar App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Goal:
+Design and build a single-page application using Ruby on Rails and AngularJS.
 
-Things you may want to cover:
+User Experience:
+As a user, I should be able to create groups and organize events. I should also be able to join other groups and attend their events. These actions will render within a calendar taking up most of the main page, therefore creating an interactive experience.
 
-* Ruby version
+Tools:
+Ruby on Rails (Server-Side Framework)
+MySQL (Database)
+AngularJS (Client-side Framework)
+Zurb Foundation (Front-end Framework)
 
-* System dependencies
+Gems:
+mysql2(dev database)
+postgressql(production database)
+foundation-rails(zurb foundation)
+thin(server)
+devise(user auth)
+angular-devise(rails + angular devise platform)
+angular_rails_csrf(rails + angular csrf token helper gem)
+angular-ui-calendar-rails(calendar gem)
+rspec-rails(test suite)
+heroku(deployment)
 
-* Configuration
+################################################
+DEVELOPMENT PROCESS
+################################################
+Friday March 6th - Monday March 9th
+------------------------------------
+Made an idea about decision and concept of application
+Researched tools appropriate for app development
 
-* Database creation
+Tuesday March 10th
+-------------------------------------------
+What I did yesterday:
+Set up development environment(i.e. installed gems, wired Rails up with Angular, etc.)
+Estimated Time req'd: 2 hours
+Time spent: 3 1/2 hours
 
-* Database initialization
+What I am doing today:
+Building the first Rails model and working on Angular CRUD. Beginning to build to framework of how the app will look.
 
-* How to run the test suite
+What I struggled with:
+I struggled with the concept of utilizing the angular-devise gem. Might need to collaborate with other classmates who are embarking on similar endeavors. The angular-rails calendar gem is not well-documented at all and I am not sure how I will incorporate it. 
 
-* Services (job queues, cache servers, search engines, etc.)
+Wednesday March 11th
+-----------------------------------------------
 
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.

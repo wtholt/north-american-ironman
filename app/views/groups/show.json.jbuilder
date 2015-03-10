@@ -1,0 +1,1 @@
+json.extract! @group, :id, :name, :info, :city, :state, :zip, :created_at, :updated_at

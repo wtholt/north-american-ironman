@@ -15,6 +15,7 @@ gem 'pg', group: :production
 
 gem 'foundation-rails'
 
+gem 'thin'
 
 
 # Use CoffeeScript for .coffee assets and views

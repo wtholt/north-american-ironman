@@ -1,0 +1,12 @@
+<h3>Current Groups</h3>
+<a ng-click='createNewGroup()'>Create new group</a>
+<ul class="inline-list">
+  <li ng-repeat="group in groups.groups">
+    <a ng-click="showGroup(group.id)">{{ group.name }}</a>
+    <span>
+      <a ng-click='editGroup(group.id)'>Edit</a>
+      <a ng-click='deleteGroup(group.id)'>Delete</a>
+    </span>
+    <br>
+  </li>
+</ul>
