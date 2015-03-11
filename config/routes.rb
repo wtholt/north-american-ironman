@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'home#index'
 
-  resources :groups
+  resources :groups do 
+    resources :events, shallow: true
+  end
 
 
   # Example of regular route:

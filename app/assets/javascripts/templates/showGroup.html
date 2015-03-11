@@ -11,5 +11,8 @@
     {{ group.state }}
     <br>
     {{ group.zip }}
+    <br>
+    <a ng-click="addEvent(group.id)">Add Event</a>
+    <a ng-click="eventIndex(group.id)">View Events</a>
   </li>
 </ul>

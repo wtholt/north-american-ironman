@@ -2,7 +2,7 @@ calendarApp.controller('editGroupCtrl', ['$location', '$scope', 'groupData', '$r
   console.log('inside editGroupCtrl')
 
   $scope.groupIndex = function() {
-    $location.url('/');
+    $location.url('/groups');
   }
 
 

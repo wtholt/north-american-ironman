@@ -24,4 +24,8 @@ var indexGroupCtrl = calendarApp.controller('indexGroupCtrl', ['$scope', 'groupD
     $location.url('/groups/' + groupId)
   }
 
+  $scope.home = function() {
+    $location.url('/');
+  }
+
 }]);

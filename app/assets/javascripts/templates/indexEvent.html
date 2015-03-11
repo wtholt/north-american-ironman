@@ -1,0 +1,8 @@
+<h4>Group Events</h4>
+<a ng-click="returnToGroup()">Back</a>
+<ul class="inline-list">
+  <li ng-repeat="event in events.events">
+    <a ng-click="showEvent(event.id)">{{ event.name }}</a>
+    <br>
+  </li>
+</ul>

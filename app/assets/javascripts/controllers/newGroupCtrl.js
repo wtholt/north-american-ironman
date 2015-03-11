@@ -2,7 +2,7 @@ calendarApp.controller('newGroupCtrl', ['$location', '$scope', 'groupData', func
   console.log('inside newGroupCtrl')
 
   $scope.groupIndex = function() {
-    $location.url('/');
+    $location.url('/groups');
   }
 
   $scope.submitGroupForm = function() {

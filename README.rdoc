@@ -47,4 +47,11 @@ I struggled with the concept of utilizing the angular-devise gem. Might need to 
 
 Wednesday March 11th
 -----------------------------------------------
+What I did yesterday:
+Built the first Rails model and finished on Angular CRUD on Group Model. Began building overall framework of application.
 
+What I am doing today:
+Finalizing plans for the backend of the application. Do I need join tables? Finish setting up active record associations for application. Incorporate Calendar into application view. Research and work on devise + angular integration.
+
+What I am struggling with: 
+Devise + Angular integration. I want the application to be single page only, and that means I will have to probably make custom Devise views. Also, I need to figure out a way soon to incorporate the main piece of the application, aka the Calendar, into the main index view.

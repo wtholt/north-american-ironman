@@ -14,9 +14,25 @@ var calendarApp = angular
         controller: 'showGroupCtrl',
         templateUrl: 'assets/templates/showGroup.html'
       })
-      .otherwise({
-        templateUrl: 'assets/templates/index.html',
+      .when('/groups',{
+        templateUrl: 'assets/templates/indexGroup.html',
         controller: 'indexGroupCtrl'
+      })
+      .when('/groups/:group_id/events/new',{
+        controller: 'newEventCtrl',
+        templateUrl: 'assets/templates/newEvent.html'
+      })
+      .when('/groups/:group_id/events', {
+        controller: 'indexEventCtrl',
+        templateUrl: 'assets/templates/indexEvent.html'
+      })
+      .when('/events/:id', {
+        controller: 'showEventCtrl',
+        templateUrl: 'assets/templates/showEvent.html'
+      })
+      .otherwise({
+        templateUrl: 'assets/templates/main.html',
+        controller: 'mainCtrl',
       })
   }])
   .config(function(AuthProvider) {
