@@ -1,5 +1,5 @@
 var calendarApp = angular
-  .module('calendarApp', ['Devise', 'ngRoute'])
+  .module('calendarApp', ['Devise', 'ngRoute', 'ui.calendar'])
   .config(['$routeProvider', function($routeProvider){
     $routeProvider
       .when('/groups/new', {

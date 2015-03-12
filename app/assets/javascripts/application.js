@@ -16,6 +16,9 @@
 //= require angular
 //= require angular-route
 //= require angular-devise/devise
+//= require angular-ui-calendar
+//= require moment
+//= require fullcalendar
 //= require underscore
 //= require home
 //= require_tree .

@@ -2,7 +2,7 @@ calendarApp.controller('showGroupCtrl', ['$location', '$scope', 'groupData', '$r
  function($location, $scope, groupData, $routeParams){
   console.log('inside showGroupCtrl')
   $scope.groups = groupData.data;
-  groupData.loadGroups();
+  $scope.group = groupData.loadOneGroup();
 
   $scope.groupIndex = function() {
     $location.url('/groups');

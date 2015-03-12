@@ -19,6 +19,10 @@ gem 'foundation-rails'
 
 gem 'thin'
 
+gem 'fullcalendar-rails'
+
+gem 'momentjs-rails'
+
 
 # Use CoffeeScript for .coffee assets and views
 # gem 'coffee-rails', '~> 4.1.0'

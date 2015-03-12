@@ -1,4 +1,4 @@
-calendarApp.factory('groupData',['$http', function($http){
+calendarApp.factory('groupData',['$http', '$routeParams', function($http, $routeParams){
   groupData = {
     data: {
       groups: [
@@ -16,6 +16,17 @@ calendarApp.factory('groupData',['$http', function($http){
         })
       })
     }
+  }
+
+  groupData.loadOneGroup = function(groupId) {
+    $http.get('/groups/' + groupId + '.json').success(function(groupsFromServer){
+      _.each(groupsFromServer, function(group){
+        groupData.pushGroup(group)
+      })
+      return group(groupId)
+    })
+    
+    // return the group by groupId
   }
 
   groupData.pushGroup = function(group) {
