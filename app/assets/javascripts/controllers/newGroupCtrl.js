@@ -22,7 +22,7 @@ calendarApp.controller('newGroupCtrl', ['$location', '$scope', 'groupData', func
     $scope.formGroupCity = '';
     $scope.formGroupState = '';
     $scope.formGroupZip = '';
-    $location.url('/');
+    $location.url('/groups');
   };
 
 }])
