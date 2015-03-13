@@ -81,4 +81,143 @@ RSpec.describe Event, type: :model do
   it 'shouldnt not have a zip' do 
     expect(event.zip).not_to eq(nil)
   end
+
+  it 'should validate when no name' do 
+    new_event = Event.new 
+    expect(new_event.valid?).to eq(false)
+    expect(new_event.errors).to include(:name)
+    expect(new_event.errors.full_messages).to include("Name can't be blank")
+  end
+
+  it 'should validate when no name' do 
+    new_event = Event.new
+    expect(new_event.valid?).not_to eq(true)
+    expect(new_event.errors).not_to eq(nil)
+    expect(new_event.errors.full_messages).not_to include(nil)
+  end
+
+  it 'should validate when no info' do 
+    new_event = Event.new
+    expect(new_event.valid?).to eq(false)
+    expect(new_event.errors).to include(:info)
+    expect(new_event.errors.full_messages).to include("Info can't be blank")
+  end
+
+  it 'should validate when no info' do 
+    new_event = Event.new 
+    expect(new_event.valid?).not_to eq(true)
+    expect(new_event.errors).not_to include(nil)
+    expect(new_event.errors.full_messages).not_to include(nil)
+  end
+
+  it 'should validate when no location' do 
+    new_event = Event.new
+    expect(new_event.valid?).to eq(false)
+    expect(new_event.errors).to include(:location)
+    expect(new_event.errors.full_messages).to include("Location can't be blank")
+  end
+
+  it 'should validate when no location' do 
+    new_event = Event.new
+    expect(new_event.valid?).not_to eq(true)
+    expect(new_event.errors).not_to include(nil)
+    expect(new_event.errors.full_messages).not_to include(nil)
+  end
+
+  it 'should validate when no address' do 
+    new_event = Event.new
+    expect(new_event.valid?).to eq(false)
+    expect(new_event.errors).to include(:address)
+    expect(new_event.errors.full_messages).to include("Address can't be blank")
+  end
+
+  it 'should validate when no address' do 
+    new_event = Event.new 
+    expect(new_event.valid?).not_to eq(true)
+    expect(new_event.errors).not_to include(nil)
+    expect(new_event.errors.full_messages).not_to include(nil)
+  end
+
+  it 'should validate when no city' do 
+    new_event = Event.new
+    expect(new_event.valid?).to eq(false)
+    expect(new_event.errors).to include(:city)
+    expect(new_event.errors.full_messages).to include("City can't be blank")
+  end
+
+  it 'should validate when no city' do 
+    new_event = Event.new
+    expect(new_event.valid?).not_to eq(true)
+    expect(new_event.errors).not_to include(nil)
+    expect(new_event.errors.full_messages).not_to include(nil)
+  end
+
+  it 'should validate when no state' do 
+    new_event = Event.new
+    expect(new_event.valid?).to eq(false)
+    expect(new_event.errors).to include(:state)
+    expect(new_event.errors.full_messages).to include("State can't be blank")
+  end
+
+  it 'should validate when no state' do 
+    new_event = Event.new
+    expect(new_event.valid?).not_to eq(true)
+    expect(new_event.errors).not_to include(nil)
+    expect(new_event.errors.full_messages).not_to include(nil)
+  end
+
+  it 'should validate when no zip' do 
+    new_event = Event.new 
+    expect(new_event.valid?).to eq(false)
+    expect(new_event.errors).to include(:zip)
+    expect(new_event.errors.full_messages).to include("Zip can't be blank")
+  end
+
+  it 'should validate when no zip' do 
+    new_event = Event.new
+    expect(new_event.valid?).not_to eq(true)
+    expect(new_event.errors).not_to include(nil)
+    expect(new_event.errors.full_messages).not_to include(nil)
+  end
+
+  it 'should belong to a group' do 
+    g = Event.reflect_on_association(:group)
+    g.macro.should == :belongs_to
+  end
+
+  it 'should belong to a user' do 
+    u = Event.reflect_on_association(:user)
+    u.macro.should == :belongs_to
+  end
+
 end
+
+
+ # it 'should have many events' do 
+ #    e = Group.reflect_on_association(:events)
+ #    e.macro.should == :has_many
+ #  end
+
+ #  it 'should belong to a user' do 
+ #    u = Group.reflect_on_association(:user)
+ #    u.macro.should == :belongs_to
+ #  end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

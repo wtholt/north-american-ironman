@@ -1,8 +1,10 @@
 class GroupsController < ApplicationController
-  respond_to :json
 
   def index
     @groups = Group.all
+    respond_to do |format|
+      format.json { render json: @groups}
+    end
   end
 
   def show
@@ -11,6 +13,9 @@ class GroupsController < ApplicationController
 
   def new
     @group = Group.new
+    respond_to do |format|
+      format.json { render json: @group }
+    end
   end
 
   def edit 
