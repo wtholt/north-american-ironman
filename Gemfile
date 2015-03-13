@@ -71,6 +71,8 @@ group :development, :test do
 
   gem 'guard-rspec', require: false
 
+  gem 'shoulda-matchers'
+
   # gem 'guard-zeus'
 
   gem 'zeus', require: false

@@ -131,4 +131,15 @@ RSpec.describe Group, type: :model do
     expect(new_group.errors).not_to include(nil)
     expect(new_group.errors.full_messages).not_to include(nil)
   end
+
+  it 'should have many events' do 
+    e = Group.reflect_on_association(:events)
+    e.macro.should == :has_many
+  end
+
+  it 'should belong to a user' do 
+    u = Group.reflect_on_association(:user)
+    u.macro.should == :belongs_to
+  end
+
 end

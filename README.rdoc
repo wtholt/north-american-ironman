@@ -70,3 +70,15 @@ Continue to work on CRUD. Work on Calendar implementation. Work on User implemen
 What I am struggling with:
 I am struggling with the show view of both groups and events. It is still a work in progress.
 -------------------------------------------------------
+
+Friday March 13th (oohhh Friday the 13th)
+------------------------------------------------------
+What I did yesterday:
+Incorporated calendar into project. Finished show page for Group.
+
+What I am doing today: 
+TESTING. So behind on it. Enough said.
+
+What I am struggling with:
+User authentication. Decided to go manual route, but I think I have enough time to maybe figure out angular-devise.
+-----------------------------------------------------------

@@ -7,4 +7,14 @@ FactoryGirl.define do
     zip 'zip'
   end
 
+  factory :event do 
+    name 'name'
+    info 'info'
+    location 'location'
+    address 'address'
+    city 'city'
+    state 'state'
+    zip 'zip'
+  end
+
 end
