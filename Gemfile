@@ -23,6 +23,8 @@ gem 'fullcalendar-rails'
 
 gem 'momentjs-rails'
 
+gem 'responders'
+
 
 # Use CoffeeScript for .coffee assets and views
 # gem 'coffee-rails', '~> 4.1.0'
@@ -38,16 +40,16 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-gem 'devise'
-
 gem 'angular_rails_csrf'
 
 gem "rails-assets-angular-devise"
 
 gem 'angular-ui-calendar-rails'
 
+# gem 'jwt'
+
 # Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
@@ -62,6 +64,16 @@ end
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+
+  gem 'quiet_assets'
+
+  gem 'factory_girl_rails', '~> 4.0'
+
+  gem 'guard-rspec', require: false
+
+  # gem 'guard-zeus'
+
+  gem 'zeus', require: false
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'

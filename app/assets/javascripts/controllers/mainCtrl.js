@@ -4,4 +4,12 @@ var mainCtrl = calendarApp.controller('mainCtrl', ['$scope', '$location', functi
   $scope.viewGroups = function() {
     $location.url('/groups')
   }
+
+  $scope.newUser = function(){
+    $location.url('/users/new');
+  }
+
+  $scope.loginUser = function(){
+    $location.url('sessions/new');
+  }
 }])

@@ -19,14 +19,14 @@ calendarApp.factory('groupData',['$http', '$routeParams', function($http, $route
   }
 
   groupData.loadOneGroup = function(groupId) {
-    $http.get('/groups/' + groupId + '.json').success(function(groupsFromServer){
-      _.each(groupsFromServer, function(group){
-        groupData.pushGroup(group)
-      })
-      return group(groupId)
-    })
+    console.log(groupId);
+    console.log(groupData.data.groups);
+    var showGroup = _.findWhere( groupData.data.groups, {id: parseInt(groupId)});
+    return showGroup
     
     // return the group by groupId
+    // var foundGroup = _.findWhere( groupData.data.groups, {id: parseInt(group.group.id)})
+
   }
 
   groupData.pushGroup = function(group) {

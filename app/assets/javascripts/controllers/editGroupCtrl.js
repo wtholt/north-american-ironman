@@ -33,7 +33,7 @@ calendarApp.controller('editGroupCtrl', ['$location', '$scope', 'groupData', '$r
     $scope.editGroup.city = '';
     $scope.editGroup.state = '';
     $scope.editGroup.zip = '';
-    $location.url('/');
+    $location.url('/groups');
   }
 
 }])
