@@ -13,13 +13,8 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
       })
     })
   }
-
-  eventData.loadOneEvent = function(){
-    $http.get('/events/' + $routeParams.id + '.json').success(function(eventFromServer){
-      _.each(eventFromServer, function(event){
-        eventData.pushEvent(event)
-      })
-    })
+  eventData.findEvent = function(eventId) {
+    return _.findWhere( eventData.data.events, {id: parseInt(eventId)})
   }
 
   eventData.pushEvent = function(event){
@@ -31,6 +26,20 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
       eventData.pushEvent(eventsFromServer);
     })
   }
+
+  eventData.updateEvent = function(event) {
+    $http.patch('/events/' + event.event.id, event).success(function(data){
+      var foundEvent = _.findWhere( eventData.data.events, {id: parseInt(event.event.id)})
+      foundEvent.name = data.name
+      foundEvent.info = data.info
+      foundEvent.location = data.location
+      foundEvent.address = data.address
+      foundEvent.city = data.city
+      foundEvent.state = data.state
+      foundEvent.zip = data.zip
+    })
+  }
+
 
   return eventData;
 

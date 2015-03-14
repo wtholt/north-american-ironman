@@ -34,6 +34,10 @@ var calendarApp = angular
         controller: 'newUserCtrl',
         templateUrl: 'assets/templates/newUser.html'
       })
+      .when('/events/:id/edit',{
+        controller: 'editEventCtrl',
+        templateUrl: 'assets/templates/editEvent.html'
+      })
       .when('/sessions/new', {
         controller: 'loginUserCtrl',
         templateUrl: 'assets/templates/loginUser.html'

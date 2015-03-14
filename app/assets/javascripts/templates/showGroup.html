@@ -1,10 +1,14 @@
 <h3>Group Info</h3>
 <a ng-click="groupIndex()">Back to Groups</a>
 <hr>
-{{group.name}}
-{{group.info}}
-{{group.city}}
-{{group.state}}
+<ul>
+  <li><label>Name</label> {{group.name}}</li>
+  <li><label>Info</label> {{group.info}}</li>
+  <li><label>City</label> {{group.city}}</li>
+  <li><label>State</label> {{group.state}}</li>
+  <a ng-click="addEvent(group.id)">Add Event</a>
+  <a ng-click="eventIndex(group.id)">View Events</a>
+</ul>
 <!-- <ul class='list-inline'>
   <li ng-repeat="group in groups.groups">
     {{ group.name }}

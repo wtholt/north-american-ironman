@@ -28,7 +28,7 @@ calendarApp.controller('newEventCtrl', ['$location', '$scope', 'eventData', '$ro
     $scope.formEventCity = '';
     $scope.formEventState = '';
     $scope.formEventZip = '';
-    $location.url('/groups/' + $routeParams.group_id)
+    $location.url('/groups/' + groupId + '/events')
   }
 
 

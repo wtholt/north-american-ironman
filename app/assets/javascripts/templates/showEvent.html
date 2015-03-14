@@ -1,5 +1,12 @@
 <h4>Event Info</h4>
-<ul class='list-inline'>
-  <li ng-repeat="event in events.events">
-  </li>
+<ul>
+  <li>{{ event.name }}</li>
+  <li>{{ event.info }}</li>
+  <li>{{ event.location }}</li>
+  <li>{{ event.address }}</li>
+  <li>{{ event.city }}</li>
+  <li>{{ event.state }}</li>
+  <li>{{ event.zip }}</li>
+  <a ng-click="editEvent(event.id)">Edit</a>
 </ul>
+<a ng-click="return(group.id)">Return</a>

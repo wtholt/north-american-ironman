@@ -10,7 +10,6 @@ RSpec.describe GroupsController, type: :controller do
     it 'should return all groups' do 
       xhr :get, :index
       expect(assigns(:groups)).not_to eq(nil)
-      expect(assigns(:groups).length).to eq(3)
     end
   end
 
