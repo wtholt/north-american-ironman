@@ -4,22 +4,32 @@ class GroupsController < ApplicationController
     @groups = Group.all
     respond_to do |format|
       format.json { render json: @groups}
+      format.html
     end
   end
 
   def show
     @group = Group.find params[:id]
+    respond_to do |format|
+      format.json {render json: @group }
+      format.html
+    end
   end
 
   def new
     @group = Group.new
     respond_to do |format|
       format.json { render json: @group }
+      format.html
     end
   end
 
   def edit 
     @group = Group.find params[:id]
+    respond_to do |format|
+      format.json { render json: @group }
+      format.html
+    end
   end
 
   def create

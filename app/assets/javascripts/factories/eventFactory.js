@@ -40,6 +40,13 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
     })
   }
 
+  eventData.deleteEvent = function(eventId) {
+    $http.delete('/events/' + eventId + '.json').success(function(data){
+      var deletedEvent = eventData.findEvent(eventId);
+      eventData.data.events = _.without(eventData.data.events, deletedEvent)
+    })
+  }
+
 
   return eventData;
 

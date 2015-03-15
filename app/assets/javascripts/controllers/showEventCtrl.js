@@ -16,5 +16,9 @@ function($location, $scope, eventData, $routeParams){
     $location.url('/events/' + $routeParams.id + '/edit')
   }
 
+  $scope.deleteEvent = function(eventId){
+    eventData.deleteEvent(eventId);
+  }
+
 
 }])

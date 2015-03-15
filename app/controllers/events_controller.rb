@@ -3,19 +3,35 @@ class EventsController < ApplicationController
   def index
     @group = Group.find params[:group_id]
     @events = @group.events
+    respond_to do |format|
+      format.json { render json: @events}
+      format.html
+    end
   end
 
   def show 
     @event = Event.find params[:id]
+    respond_to do |format|
+      format.json { render json: @event}
+      format.html
+    end
   end
 
   def new
     @group = Group.find params[:group_id]
     @event = @group.events.new
+    respond_to do |format|
+      format.json { render json: @event }
+      format.html
+    end
   end
 
   def edit
     @event = Event.find params[:id]
+    respond_to do |format|
+      format.json { render json: @event }
+      format.html
+    end
   end
 
   def create

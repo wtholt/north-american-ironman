@@ -82,3 +82,17 @@ TESTING. So behind on it. Enough said.
 What I am struggling with:
 User authentication. Decided to go manual route, but I think I have enough time to maybe figure out angular-devise.
 -----------------------------------------------------------
+Saturday March 14th
+---------------------------------------------------------
+Took day off, felt a little burnt out after long week.
+---------------------------------------------------------
+Sunday March 15th
+--------------------------------------------------------
+What I did yesterday:
+Relaxed
+What I am doing today: 
+Testing controllers, working on event crud, writing js promises
+What I am struggling with:
+Figuring out how to pull together a MVP for Wednesday's presentation.
+Still a lot to do.
+----------------------------------------------------------
