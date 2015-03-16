@@ -4,7 +4,7 @@
 <a ng-click='createNewGroup()'>Create new group</a>
 <ul class="inline-list">
   <li ng-repeat="group in groups.groups">
-    <a ng-click="showGroup(group.id)">{{ group.name }}</a>
+    <a ng-click="showGroup(group.id)"><strong>{{ group.name }}</strong></a>
     <span>
       <a ng-click='editGroup(group.id)'>Edit</a>
       <a ng-click='deleteGroup(group.id)'>Delete</a>

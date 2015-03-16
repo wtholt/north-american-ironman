@@ -7,13 +7,15 @@ calendarApp.controller('newEventCtrl', ['$location', '$scope', 'eventData', '$ro
 
   }
 
-  $scope.submitEventForm = function() {
+  $scope.submitEventForm = function(groupId) {
     eventData.addEvent(
     {
       event: {
-        name: $scope.formEventName,
+        title: $scope.formEventTitle,
         info: $scope.formEventInfo,
         location: $scope.formEventLocation,
+        start: $scope.formEventDate,
+        end: $scope.formEventEndDate,
         address: $scope.formEventAddress,
         city: $scope.formEventCity,
         state: $scope.formEventState,
@@ -24,11 +26,13 @@ calendarApp.controller('newEventCtrl', ['$location', '$scope', 'eventData', '$ro
     $scope.formEventName = '';
     $scope.formEventInfo = '';
     $scope.formEventLocation = '';
+    $scope.formEventDate = '';
+    $scope.formEventEndDate = '';
     $scope.formEventAddress = '';
     $scope.formEventCity = '';
     $scope.formEventState = '';
     $scope.formEventZip = '';
-    $location.url('/groups/' + groupId + '/events')
+    $location.url('/groups/' + $routeParams.group_id + '/events')
   }
 
 

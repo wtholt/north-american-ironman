@@ -1,9 +1,11 @@
 <h4>Add Event</h4>
 <a ng-click="groupShow(group.id)">Return</a>
-<form ng-submit="submitEventForm()">
-  <input type="text", placeholder="Event Name...", ng-model="formEventName">
+<form ng-submit="submitEventForm(group.id)">
+  <input type="text", placeholder="Event Name...", ng-model="formEventTitle">
   <textarea placeholder="Event Info...", ng-model="formEventInfo"></textarea>
   <input type="text", placeholder="Event Location...", ng-model="formEventLocation">
+  <label>Start Date</label><input type="date", placeholder="Event Date...", ng-model="formEventDate">
+  <label>End Date</label><input type="date", placeholder="Event End Date", ng-model="formEventEndDate">
   <input type="text", placeholder="Event Address...", ng-model="formEventAddress">
   <input type="text", placeholder="Event City...", ng-model="formEventCity">
   <input type="text", placeholder="Event State...", ng-model="formEventState">

@@ -30,9 +30,10 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
   eventData.updateEvent = function(event) {
     $http.patch('/events/' + event.event.id, event).success(function(data){
       var foundEvent = _.findWhere( eventData.data.events, {id: parseInt(event.event.id)})
-      foundEvent.name = data.name
+      foundEvent.title = data.title
       foundEvent.info = data.info
       foundEvent.location = data.location
+      foundEvent.date_field = data.start
       foundEvent.address = data.address
       foundEvent.city = data.city
       foundEvent.state = data.state

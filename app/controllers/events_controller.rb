@@ -54,7 +54,7 @@ class EventsController < ApplicationController
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to @event, notice: 'Event was successfully updated.' }
-        format.json { render :show, status: :ok, location: @event }
+        format.json { render json: @event}
       else
         format.html { render :edit }
         format.json { render json: @event.errors, status: :unprocessable_entity }
@@ -75,13 +75,15 @@ class EventsController < ApplicationController
 private
   def event_params
     params.require(:event).permit(
-      :name, 
+      :title, 
       :info, 
       :location, 
       :address,
       :city,
       :state,
-      :zip
+      :zip,
+      :start,
+      :end
     )
   end
 end

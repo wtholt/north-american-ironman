@@ -1,5 +1,13 @@
-calendarApp.controller('calendarCtrl', function($scope){
-  $scope.eventSources = [];
+calendarApp.controller('calendarCtrl',[
+'$scope', 'uiCalendarConfig', '$routeParams', 'eventData', 
+function($scope, uiCalendarConfig, $routeParams, eventData){
+  $scope.eventSources = [
+    {
+      url: '/groups/10/events.json',
+      type: 'GET',
+      color: 'red',
+    }
+  ];
   $scope.uiConfig = {
     calendar:{
       height: 450,
@@ -11,4 +19,4 @@ calendarApp.controller('calendarCtrl', function($scope){
       },
     }
   }
-})
+}])

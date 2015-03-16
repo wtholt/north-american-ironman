@@ -17,9 +17,11 @@ $scope.submitEventForm = function(){
   {
     event: {
       id: $routeParams.id,
-      name: $scope.editEvent.name,
+      title: $scope.editEvent.name,
       info: $scope.editEvent.info,
       location: $scope.editEvent.location,
+      start: $scope.editEvent.start,
+      end: $scope.editEvent.end,
       address: $scope.editEvent.address,
       city: $scope.editEvent.city,
       state: $scope.editEvent.state,
@@ -27,7 +29,7 @@ $scope.submitEventForm = function(){
     }
   }
   );
-  $scope.editEvent.name = '';
+  $scope.editEvent.title = '';
   $scope.editEvent.info = '';
   $scope.editEvent.location = '';
   $scope.editEvent.address = '';
