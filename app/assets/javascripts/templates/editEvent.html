@@ -1,6 +1,6 @@
 <h3>Update Event</h3>
 <form ng-submit="submitEventForm()">
-  <input type="text", placeholder="Event Name...", ng-model="editEvent.name">
+  <input type="text", placeholder="Event Name...", ng-model="editEvent.title">
   <textarea placeholder="Event Info...", ng-model="editEvent.info"></textarea>
   <input type="text", placeholder="Event Location...", ng-model="editEvent.location">
   <input type="date", placeholder="Event Date...", ng-model="editEvent.start">
@@ -9,7 +9,7 @@
   <input type="text", placeholder="Event City...", ng-model="editEvent.city">
   <input type="text", placeholder="Event State...", ng-model="editEvent.state">
   <input type="text", placeholder="Event Zip...", ng-model="editEvent.zip">
-  <input type="submit">
+  <input type="submit" class="button">
 </form>
 
 

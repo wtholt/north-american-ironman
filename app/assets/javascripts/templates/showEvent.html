@@ -1,13 +1,13 @@
 <h4>Event Info</h4>
 <ul>
-  <li>{{ event.name }}</li>
-  <li>{{ event.info }}</li>
-  <li>{{ event.location }}</li>
-  <li>{{ event.date_field }}</li>
-  <li>{{ event.address }}</li>
-  <li>{{ event.city }}</li>
-  <li>{{ event.state }}</li>
-  <li>{{ event.zip }}</li>
+  <li><label>Name</label>{{ event.title }}</li>
+  <li><label>Info</label>{{ event.info }}</li>
+  <li><label>Location</label>{{ event.location }}</li>
+  <li><label>Date</label>{{ event.start }}</li>
+  <li><label>Address</label>{{ event.address }}</li>
+  <li><label>City</label>{{ event.city }}</li>
+  <li><label>State</label>{{ event.state }}</li>
+  <li><label>Zip</label>{{ event.zip }}</li>
   <a ng-click="editEvent(event.id)">Edit</a>
   <a ng-click="deleteEvent(event.id)">Delete</a>
 </ul>

@@ -5,8 +5,7 @@ function($scope, uiCalendarConfig, $routeParams, eventData){
   // bind your eventsources to the events that are loaded
   // $scope.eventSources = eventData.data;
 
-  $scope.eventSources = eventData.data;
-
+  $scope.eventSources = [eventData.data.events];
 
   $scope.uiConfig = {
     calendar:{
