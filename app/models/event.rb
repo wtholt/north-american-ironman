@@ -2,7 +2,7 @@ class Event < ActiveRecord::Base
   belongs_to :user
   belongs_to :group
 
-  validates :name, presence: true
+  validates :title, presence: true
   validates :info, presence: true
   validates :location, presence: true
   validates :address, presence: true

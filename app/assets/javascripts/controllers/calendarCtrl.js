@@ -1,13 +1,13 @@
 calendarApp.controller('calendarCtrl',[
 '$scope', 'uiCalendarConfig', '$routeParams', 'eventData', 
 function($scope, uiCalendarConfig, $routeParams, eventData){
-  $scope.eventSources = [
-    {
-      url: '/groups/10/events.json',
-      type: 'GET',
-      color: 'red',
-    }
-  ];
+  // do a load events for your service
+  // bind your eventsources to the events that are loaded
+  // $scope.eventSources = eventData.data;
+
+  $scope.eventSources = eventData.data;
+
+
   $scope.uiConfig = {
     calendar:{
       height: 450,

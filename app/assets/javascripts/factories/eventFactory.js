@@ -2,15 +2,17 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
   eventData = {
     data: {
       events: [
-      ]
+      ],
+      color: 'red'
     },
   }
 
-  eventData.loadEvents = function(){
-    $http.get('/groups/' + $routeParams.group_id + '/events.json').success(function(eventsFromServer){
+  eventData.loadEvents = function(group_id){
+    $http.get('/groups/' + group_id + '/events.json').success(function(eventsFromServer){
       _.each(eventsFromServer, function(event){
         eventData.pushEvent(event)
       })
+      console.log(eventData.data);
     })
   }
   eventData.findEvent = function(eventId) {
