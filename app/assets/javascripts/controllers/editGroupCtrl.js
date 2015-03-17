@@ -15,6 +15,7 @@ calendarApp.controller('editGroupCtrl', ['$location', '$scope', 'groupData', '$r
   this.deferred = $q.defer();
   this.deferred.promise.then($scope.findGroup);
   groupData.loadGroups(this.deferred);
+  
   $scope.submitGroupForm = function(){
     groupData.updateGroup(
     {

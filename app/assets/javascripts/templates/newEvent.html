@@ -1,14 +1,17 @@
 <h4>Add Event</h4>
-<a ng-click="groupShow(group.id)">Return</a>
+<hr>
 <form ng-submit="submitEventForm(group.id)">
-  <input type="text", placeholder="Event Name...", ng-model="formEventTitle">
-  <textarea placeholder="Event Info...", ng-model="formEventInfo"></textarea>
-  <input type="text", placeholder="Event Location...", ng-model="formEventLocation">
-  <label>Start Date</label><input type="date", placeholder="Event Date...", ng-model="formEventDate">
-  <label>End Date</label><input type="date", placeholder="Event End Date", ng-model="formEventEndDate">
-  <input type="text", placeholder="Event Address...", ng-model="formEventAddress">
-  <input type="text", placeholder="Event City...", ng-model="formEventCity">
-  <input type="text", placeholder="Event State...", ng-model="formEventState">
-  <input type="text", placeholder="Event Zip...", ng-model="formEventZip">
-  <input type="submit">
+  <input type="text", placeholder="Name", ng-model="formEventTitle">
+  <textarea placeholder="Info", ng-model="formEventInfo"></textarea>
+  <input type="text", placeholder="Location", ng-model="formEventLocation">
+  <label>Start Date</label><input type="date", placeholder="Start Date", ng-model="formEventDate">
+  <label>End Date</label><input type="date", placeholder="End Date", ng-model="formEventEndDate">
+  <input type="text", placeholder="Address", ng-model="formEventAddress">
+  <input type="text", placeholder="City", ng-model="formEventCity">
+  <input type="text", placeholder="State", ng-model="formEventState">
+  <input type="text", placeholder="Zip", ng-model="formEventZip">
+  <span>
+    <input type="submit" class="button tiny success">
+    <a ng-click="groupShow(group.id)" class="button tiny alert">Cancel</a>
+  </span>
 </form>

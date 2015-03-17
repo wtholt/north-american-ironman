@@ -1,14 +1,17 @@
-<h3>Update Group</h3>
-<a ng-click="groupIndex()">Back to Groups</a>
+<h4>Update Group</h4>
+<hr>
 <form ng-submit="submitGroupForm()">
-  <input type="text", placeholder="Group Name...", ng-model="editGroup.name">
+  <input type="text", placeholder="Name", ng-model="editGroup.name">
   <br>
-  <textarea placeholder="Group Info...", ng-model="editGroup.info"></textarea>
+  <textarea placeholder="Info", ng-model="editGroup.info"></textarea>
   <br>
   <input type="text", placeholder="City", ng-model="editGroup.city">
   <br>
   <input type="text", placeholder="State", ng-model="editGroup.state">
   <br>
   <input type="text", placeholder="Zip Code", ng-model="editGroup.zip">
-  <input type="submit">
+  <span>
+    <input type="submit" class="button tiny success"> 
+    <a ng-click="groupIndex()" class="button tiny alert">Cancel</a>
+  </span>
 </form>

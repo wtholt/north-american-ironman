@@ -1,14 +1,23 @@
 <h3>Group Info</h3>
+<hr>
 <a ng-click="groupIndex()">Back to Groups</a>
 <hr>
-<ul>
-  <li><label>Name</label> {{group.name}}</li>
-  <li><label>Info</label> {{group.info}}</li>
-  <li><label>City</label> {{group.city}}</li>
-  <li><label>State</label> {{group.state}}</li>
-  <li><label>Zip Code</label> {{group.zip}}</li>
-  <a ng-click="addEvent(group.id)">Add Event</a>
-  <a ng-click="eventIndex(group.id)">View Events</a>
+<ul class="vcard">
+  <li class="fn">{{group.name}}</li>
+  <li>{{group.info}}</li>
+  <li class="locality">{{group.city}}</li>
+  <li class="state">{{group.state}}</li>
+  <li class="zip">{{group.zip}}</li>
+  <br>
+  <span>
+    <i class="fi-plus"></i>
+    <a ng-click="addEvent(group.id)">Add Event to Group</a>
+  </span>
+  <br>
+  <span>
+    <i class="fi-magnifying-glass"></i>
+    <a ng-click="eventIndex(group.id)">View Current Events of Group</a>
+  </span>
 </ul>
 <!-- <ul class='list-inline'>
   <li ng-repeat="group in groups.groups">

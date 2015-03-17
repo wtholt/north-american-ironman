@@ -9,12 +9,12 @@ function($scope, uiCalendarConfig, $routeParams, eventData){
 
   $scope.uiConfig = {
     calendar:{
-      height: 450,
       editable: true,
+      contentHeight: 600,
       header:{
-        left: 'month basicWeek basicDay agendaWeek agendaDay',
+        left: 'prev, next',
         center: 'title',
-        right: 'today prev,next'
+        right: '',
       },
     }
   }

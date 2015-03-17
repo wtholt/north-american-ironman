@@ -1,6 +1,9 @@
 body, html {
   font-family: 'Lato', sans-serif;
 }
+h1 {
+  font-family: 'Lato', sans-serif;
+}
 .small-8.columns {
   height: 100%;
   border-right: 3px solid black;
@@ -17,4 +20,12 @@ body, html {
 
 li {
   list-style-type: none;
+}
+
+.scenic {
+  background-image: url('scenic.jpg');
+  background-image: no-repeat;
+  background-size: cover;
+  height: 150px;
+  width: auto;
 }

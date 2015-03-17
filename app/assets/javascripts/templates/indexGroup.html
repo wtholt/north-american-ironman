@@ -1,14 +1,24 @@
-<h3>Current Groups</h3>
-<a ng-click='home()'>Home</a>
-<br>
-<a ng-click='createNewGroup()'>Create new group</a>
-<ul class="inline-list">
+<div class="scenic"></div>
+<span>
+  <i class="fi-home"></i>
+  <a ng-click='home()'>Home</a>
+</span>
+<hr>
+<h4>Current Groups</h4>
+<h6 class="subheader">Click on Group for more information</h6>
+<span>
+  <i class="fi-plus"></i>
+  <a ng-click='createNewGroup()'>Create new group</a>
+</span>
+<hr>
+<ul>
   <li ng-repeat="group in groups.groups">
     <a ng-click="showGroup(group.id)"><strong>{{ group.name }}</strong></a>
     <span>
-      <a ng-click='editGroup(group.id)'>Edit</a>
-      <a ng-click='deleteGroup(group.id)'>Delete</a>
+      <a ng-click='editGroup(group.id)'><i class="fi-pencil"></i></a>
+      <a ng-click='deleteGroup(group.id)'><i class="fi-trash"></i></a>
     </span>
     <br>
+    <hr>
   </li>
 </ul>
