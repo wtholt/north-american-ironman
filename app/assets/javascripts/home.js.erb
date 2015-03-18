@@ -1,5 +1,8 @@
 var calendarApp = angular
   .module('calendarApp', ['ngRoute', 'ui.calendar', 'Devise'])
+  .config(function(AuthProvider){
+
+  })
   .config(['$routeProvider', function($routeProvider){
     $routeProvider
       .when('/groups/new', {
@@ -37,6 +40,14 @@ var calendarApp = angular
       .when('/users/sign_up', {
         controller: 'userCtrl',
         templateUrl: 'assets/templates/signUp.html'
+      })
+      .when('/users/sign_in', {
+        controller: 'userCtrl',
+        templateUrl: 'assets/templates/login.html'
+      })
+      .when('/users/sign_out',{
+        controller: 'userCtrl',
+        templateUrl: 'assets/templates/main.html'
       })
       .otherwise({
         templateUrl: "<%= asset_path ('templates/main.html') %>",
