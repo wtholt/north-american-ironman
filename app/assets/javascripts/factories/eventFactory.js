@@ -5,15 +5,18 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
       ],
       color: 'red'
     },
+    isLoaded: false
   }
 
   eventData.loadEvents = function(group_id){
-    $http.get('/groups/' + group_id + '/events.json').success(function(eventsFromServer){
-      _.each(eventsFromServer, function(event){
-        eventData.pushEvent(event)
+    if(eventData.isLoaded == false){
+      $http.get('/groups/' + group_id + '/events.json').success(function(eventsFromServer){
+        _.each(eventsFromServer, function(event){
+          eventData.pushEvent(event)
+        })
+        console.log(eventData.data);
       })
-      console.log(eventData.data);
-    })
+    }
   }
   eventData.findEvent = function(eventId) {
     return _.findWhere( eventData.data.events, {id: parseInt(eventId)})
