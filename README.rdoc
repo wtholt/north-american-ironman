@@ -96,3 +96,25 @@ What I am struggling with:
 Figuring out how to pull together a MVP for Wednesday's presentation.
 Still a lot to do.
 ----------------------------------------------------------
+Monday March 16th
+----------------------------------------------------------
+What I did yesterday:
+Tested controllers. 97% coverage according to SimpleCov!
+
+What I am doing today: 
+Interacting UI Calendar with AJAX requests, rendering group events on the calendar itself.
+
+What I am struggling with:
+Feeling rudderless in regards to user authentication.
+-------------------------------------------------------------
+Tuesday March 17th
+-------------------------------------------------------------
+What I did yesterday:
+Events now render on the Calendar. Huge accomplishment. Received some help from the instructor in order to make the events render. 
+
+What I am doing today:
+Prepping for MVP presentation tomorrow morning. Styling, deploying what I have to Heroku.
+
+What I am struggling with:
+At this point I am looking forward to the presentation, because I will get to receive feedback about my project.
+-------------------------------------------------------------
