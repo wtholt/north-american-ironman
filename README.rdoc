@@ -118,3 +118,14 @@ Prepping for MVP presentation tomorrow morning. Styling, deploying what I have t
 What I am struggling with:
 At this point I am looking forward to the presentation, because I will get to receive feedback about my project.
 -------------------------------------------------------------
+Wednesday March 18th
+-------------------------------------------------------------
+What I did yesterday:
+Deployed MVP to Heroku in preparation for mvp presentation Wednesday morning. 
+
+What I am doing today:
+Presenting project and working on buggy javascript issues.
+
+What I am struggling with:
+Struggling to gauge the progress of my project. Looking forward to presentation today to hear feedback from peers and instructors.
+--------------------------------------------------------------
