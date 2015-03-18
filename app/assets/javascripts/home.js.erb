@@ -3,44 +3,44 @@ var calendarApp = angular
   .config(['$routeProvider', function($routeProvider){
     $routeProvider
       .when('/groups/new', {
-        templateUrl: 'assets/templates/newGroup.html',
+        templateUrl: "<%= asset_path ('templates/newGroup.html') %>",
         controller: 'newGroupCtrl'
       })
       .when('/groups/:id/edit',{
         controller: 'editGroupCtrl',
-        templateUrl: 'assets/templates/editGroup.html'
+        templateUrl: "<%= asset_path ('templates/editGroup.html') %>"
       })
       .when('/groups/:id', {
         controller: 'showGroupCtrl',
-        templateUrl: 'assets/templates/showGroup.html'
+        templateUrl: "<%= asset_path ('templates/showGroup.html') %>"
       })
       .when('/groups',{
-        templateUrl: 'assets/templates/indexGroup.html',
+        templateUrl: "<%= asset_path ('templates/indexGroup.html') %>",
         controller: 'indexGroupCtrl'
       })
       .when('/groups/:group_id/events/new',{
         controller: 'newEventCtrl',
-        templateUrl: 'assets/templates/newEvent.html'
+        templateUrl: "<%= asset_path ('templates/newEvent.html') %>"
       })
       .when('/groups/:group_id/events', {
         controller: 'indexEventCtrl',
-        templateUrl: 'assets/templates/indexEvent.html'
+        templateUrl: "<%= asset_path ('templates/indexEvent.html') %>"
       })
       .when('/events/:id', {
         controller: 'showEventCtrl',
-        templateUrl: 'assets/templates/showEvent.html'
+        templateUrl: "<%= asset_path ('templates/showEvent.html') %>"
       })
       .when('/users/new', {
         controller: 'newUserCtrl',
-        templateUrl: 'assets/templates/newUser.html'
+        templateUrl: "<%= asset_path ('templates/newUser.html') %>"
       })
       .when('/events/:id/edit',{
         controller: 'editEventCtrl',
-        templateUrl: 'assets/templates/editEvent.html'
+        templateUrl: "<%= asset_path ('templates/editEvent.html') %>"
       })
       .when('/sessions/new', {
         controller: 'loginUserCtrl',
-        templateUrl: 'assets/templates/loginUser.html'
+        templateUrl: "<%= asset_path ('templates/loginUser.html') %>"
       })
       .otherwise({
         templateUrl: "<%= asset_path ('templates/main.html') %>",
