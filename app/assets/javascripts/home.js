@@ -43,7 +43,7 @@ var calendarApp = angular
         templateUrl: 'assets/templates/loginUser.html'
       })
       .otherwise({
-        templateUrl: 'assets/templates/main.html',
+        templateUrl: asset_path('templates/main.html'),
         controller: 'mainCtrl',
       })
   }])
