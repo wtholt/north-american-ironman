@@ -5,11 +5,7 @@ var mainCtrl = calendarApp.controller('mainCtrl', ['$scope', '$location', functi
     $location.url('/groups')
   }
 
-  $scope.newUser = function(){
-    $location.url('/users/new');
-  }
-
-  $scope.loginUser = function(){
-    $location.url('sessions/new');
+  $scope.signUp = function() {
+    $location.url('/users/sign_up')
   }
 }])

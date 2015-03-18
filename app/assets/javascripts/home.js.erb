@@ -1,5 +1,5 @@
 var calendarApp = angular
-  .module('calendarApp', ['ngRoute', 'ui.calendar'])
+  .module('calendarApp', ['ngRoute', 'ui.calendar', 'Devise'])
   .config(['$routeProvider', function($routeProvider){
     $routeProvider
       .when('/groups/new', {
@@ -30,17 +30,13 @@ var calendarApp = angular
         controller: 'showEventCtrl',
         templateUrl: "<%= asset_path ('templates/showEvent.html') %>"
       })
-      .when('/users/new', {
-        controller: 'newUserCtrl',
-        templateUrl: "<%= asset_path ('templates/newUser.html') %>"
-      })
       .when('/events/:id/edit',{
         controller: 'editEventCtrl',
         templateUrl: "<%= asset_path ('templates/editEvent.html') %>"
       })
-      .when('/sessions/new', {
-        controller: 'loginUserCtrl',
-        templateUrl: "<%= asset_path ('templates/loginUser.html') %>"
+      .when('/users/sign_up', {
+        controller: 'userCtrl',
+        templateUrl: 'assets/templates/signUp.html'
       })
       .otherwise({
         templateUrl: "<%= asset_path ('templates/main.html') %>",

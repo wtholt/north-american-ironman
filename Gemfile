@@ -20,6 +20,8 @@ gem "rails-erd"
 
 gem 'faker', '~> 1.4.3'
 
+gem 'devise'
+
 gem 'database_cleaner', '~> 1.4.1'
 
 gem 'pg', group: :production
