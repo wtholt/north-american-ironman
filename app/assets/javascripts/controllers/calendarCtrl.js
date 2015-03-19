@@ -11,6 +11,7 @@ function($scope, uiCalendarConfig, $routeParams, eventData){
     calendar:{
       editable: true,
       contentHeight: 600,
+      lazyFetching: false,
       header:{
         left: 'prev, next',
         center: 'title',

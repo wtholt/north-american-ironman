@@ -1,7 +1,8 @@
-var mainCtrl = calendarApp.controller('mainCtrl', ['$scope', '$location', 'Auth', 'flash', function($scope, $location, Auth, flash){
+var mainCtrl = calendarApp.controller('mainCtrl', ['$scope', '$location', 'Auth', function($scope, $location, Auth){
   console.log('inside main controller')
 
-
+  $scope.hide = function() {
+  }
 
   $scope.viewGroups = function() {
     $location.url('/groups')
@@ -13,7 +14,6 @@ var mainCtrl = calendarApp.controller('mainCtrl', ['$scope', '$location', 'Auth'
 
   $scope.login = function() {
     $location.url('/users/sign_in')
-    flash.success = 'Signed in successfully'
   }
 
   $scope.logout = function() {

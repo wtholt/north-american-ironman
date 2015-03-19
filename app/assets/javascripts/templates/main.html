@@ -2,12 +2,9 @@
 <h3>Simple Calendar</h3>
 <h6 class="subheader">Social - Productive - Easy</h6>
 <hr>
-<div flash-alert="success" active-class="in" class="alert fade">
-  <div class="alert-message">{{flash.message}}</div>
-</div>
 <span>
   <i class="fi-trash"></i>
-  <a ng-click="logout()">Log-Out</a>
+  <a ng-click="logout()" ng-hide="authenticate()">Log-Out</a>
 </span>
 <hr>
 <span>
