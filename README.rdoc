@@ -129,3 +129,14 @@ Presenting project and working on buggy javascript issues.
 What I am struggling with:
 Struggling to gauge the progress of my project. Looking forward to presentation today to hear feedback from peers and instructors.
 --------------------------------------------------------------
+Thursday March 19th
+--------------------------------------------------------------
+What I did yesterday:
+Presented what I had so far to the class. Implemented User Authentication with angular-devise. Easier than I thought.
+
+What I am doing today:
+Working on some buggy javascript issues that are hopefully simple.
+
+What I am struggling with: 
+Nothing immediate that comes to mind.
+-----------------------------------------------------------------
