@@ -11,11 +11,11 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
   eventData.loadEvents = function(group_id){
     if(eventData.isLoaded == false){
       $http.get('/groups/' + group_id + '/events.json').success(function(eventsFromServer){
-        _.each(eventsFromServer, function(event){
-          eventData.pushEvent(event)
-        })
-        console.log(eventData.data);
-      })
+        console.dir(eventsFromServer);
+        eventData.data.events = eventsFromServer;
+        console.dir(eventData.data);
+      });
+      console.dir(eventData.data);
     }
   }
   eventData.findEvent = function(eventId) {

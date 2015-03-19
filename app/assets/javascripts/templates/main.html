@@ -2,6 +2,14 @@
 <h3>Simple Calendar</h3>
 <h6 class="subheader">Social - Productive - Easy</h6>
 <hr>
+<div flash-alert="success" active-class="in" class="alert fade">
+  <div class="alert-message">{{flash.message}}</div>
+</div>
+<span>
+  <i class="fi-trash"></i>
+  <a ng-click="logout()">Log-Out</a>
+</span>
+<hr>
 <span>
   <i class="fi-torsos"></i>
   <a ng-click="signUp()">Sign-Up</a>
@@ -10,11 +18,6 @@
 <span>
   <i class="fi-male-female"></i>
   <a ng-click="login()">Log-In</a>
-</span>
-<hr>
-<span>
-  <i class="fi-trash"></i>
-  <a ng-click="logout()">Log-Out</a>
 </span>
 <hr>
 <span>

@@ -17,6 +17,7 @@
 //= require angular-route
 //= require angular-devise/devise
 //= require angular-ui-calendar
+//= require angular-flash.min
 //= require moment
 //= require fullcalendar
 //= require underscore
