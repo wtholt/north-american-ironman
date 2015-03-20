@@ -7,7 +7,7 @@ RSpec.describe Event, type: :model do
   }
 
   it 'should have required data' do 
-    expect(event.name).to eq('name')
+    expect(event.title).to eq('name')
     expect(event.info).to eq('info')
     expect(event.location).to eq('location')
     expect(event.address).to eq('address')
@@ -17,7 +17,7 @@ RSpec.describe Event, type: :model do
   end
 
   it 'shouldnt not have required data' do 
-    expect(event.name).not_to eq(nil)
+    expect(event.title).not_to eq(nil)
     expect(event.info).not_to eq(nil)
     expect(event.location).not_to eq(nil)
     expect(event.address).not_to eq(nil)
@@ -26,12 +26,12 @@ RSpec.describe Event, type: :model do
     expect(event.zip).not_to eq(nil)
   end
 
-  it 'should have a name' do 
-    expect(event.name).to eq('name')
+  it 'should have a title' do 
+    expect(event.title).to eq('name')
   end
 
-  it 'shouldnt not have a name' do 
-    expect(event.name).not_to eq(nil)
+  it 'shouldnt not have a title' do 
+    expect(event.title).not_to eq(nil)
   end
 
   it 'should have info' do 
@@ -82,14 +82,14 @@ RSpec.describe Event, type: :model do
     expect(event.zip).not_to eq(nil)
   end
 
-  it 'should validate when no name' do 
+  it 'should validate when no title' do 
     new_event = Event.new 
     expect(new_event.valid?).to eq(false)
-    expect(new_event.errors).to include(:name)
-    expect(new_event.errors.full_messages).to include("Name can't be blank")
+    expect(new_event.errors).to include(:title)
+    expect(new_event.errors.full_messages).to include("Title can't be blank")
   end
 
-  it 'should validate when no name' do 
+  it 'should validate when no title' do 
     new_event = Event.new
     expect(new_event.valid?).not_to eq(true)
     expect(new_event.errors).not_to eq(nil)

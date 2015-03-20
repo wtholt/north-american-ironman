@@ -140,3 +140,14 @@ Working on some buggy javascript issues that are hopefully simple.
 What I am struggling with: 
 Nothing immediate that comes to mind.
 -----------------------------------------------------------------
+Friday March 20th
+-----------------------------------------------------------------
+What I did yesterday: 
+Fixed buggy javascript issue on event index page.
+
+What I am doing today:
+Improving the user experience, namely changing content to render whether or not a user is signed in.
+
+What I am struggling with:
+The UI Calendar appears to be problematic. It keeps adding events onto a calendar everytime page is loaded.
+----------------------------------------------------------------

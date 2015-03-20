@@ -46,7 +46,7 @@ RSpec.describe EventsController, type: :controller do
       it 'shouldnt create' do 
         expect{
           post :create, format: :json, event:{
-            name: '',
+            title: '',
             info: '',
             location: '',
             address: '',

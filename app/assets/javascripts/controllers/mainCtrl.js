@@ -1,7 +1,8 @@
 var mainCtrl = calendarApp.controller('mainCtrl', ['$scope', '$location', 'Auth', function($scope, $location, Auth){
   console.log('inside main controller')
 
-  $scope.hide = function() {
+  $scope.authenticate = function() {
+    
   }
 
   $scope.viewGroups = function() {

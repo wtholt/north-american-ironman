@@ -8,7 +8,7 @@ FactoryGirl.define do
   end
 
   factory :event do 
-    name 'name'
+    title 'name'
     info 'info'
     location 'location'
     address 'address'
