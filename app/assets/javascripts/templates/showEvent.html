@@ -1,5 +1,5 @@
 <h4>Event Info</h4>
-<ul>
+<ul class="vcard">
   <li><label>Name</label>{{ event.title }}</li>
   <li><label>Info</label>{{ event.info }}</li>
   <li><label>Location</label>{{ event.location }}</li>
@@ -11,4 +11,5 @@
   <a ng-click="editEvent(event.id)">Edit</a>
   <a ng-click="deleteEvent(event.id)">Delete</a>
 </ul>
+<br>
 <a ng-click="return()">Return</a>

@@ -1,11 +1,23 @@
 var calendarApp = angular
-  .module('calendarApp', ['ngRoute', 'ui.calendar', 'Devise', 'angular-flash.service', 'angular-flash.flash-alert-directive'])
+  .module('calendarApp', ['ngRoute', 'ui.calendar', 'Devise', 'angular-flash.service', 'angular-flash.flash-alert-directive', 'angularSpinner'])
   .config(function(AuthProvider){
 
   })
   .config(function (flashProvider) {
     flashProvider.errorClassnames.push('alert-danger');
   })
+  .config(['usSpinnerConfigProvider', function(usSpinnerConfigProvider){
+    usSpinnerConfigProvider.setDefaults({
+      lines: 6,
+      length: 6,
+      width: 2,
+      radius: 4,
+      corners: 0.6,
+      direction: 1,
+      color: '#000',
+      speed: 1.4
+    })
+  }])
   .config(['$routeProvider', function($routeProvider){
     $routeProvider
       .when('/groups/new', {

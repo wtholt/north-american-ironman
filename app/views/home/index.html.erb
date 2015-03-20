@@ -1,10 +1,33 @@
 <div class="row">
+  <div class="small-12 columns">
+    <div ng-controller="navbarCtrl">
+      <nav class="top-bar" data-topbar role="navigation">
+        <ul class="left">
+          <li>
+            <a ng-click="home()">Home</a>
+            <i class="fi-home"></i>
+          </li>
+        </ul>
+        <ul class="right">
+            <li class="has-dropdown">
+              <a ng-click="signUp()" ng-hide="isNotLoggedIn()">Sign-Up</a>
+              <i class="fi-torsos" ng-hide="isNotLoggedIn()"></i>
+              <a ng-click="login()" ng-hide="isNotLoggedIn()">Log-In</a>
+              <i class="fi-male-female" ng-hide="isNotLoggedIn()"></i>
+              <a ng-click="logout()" ng-hide="isLoggedIn()">Log-Out</a>
+              <i class="fi-trash" ng-hide="isLoggedIn()"></i>
+            </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
+<div class="row">
   <div class="small-8 columns">
     <div ng-controller="calendarCtrl">
       <div ui-calendar="uiConfig.calendar" ng-model="eventSources"></div>
     </div>
   </div>
-
   <div class="small-4 columns">
     <div ng-view= ''></div>
   </div>

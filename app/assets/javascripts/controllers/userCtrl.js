@@ -2,6 +2,11 @@ calendarApp.controller('userCtrl', ['$location', '$scope', '$routeParams', 'Auth
 function($location, $scope, $routeParams, Auth){
   console.log('inside userCtrl');
 
+  // $scope.loading = function() {
+  //   $scope.loading = false;
+  // }
+
+
   $scope.cancel = function() {
     $location.url('/');
   }

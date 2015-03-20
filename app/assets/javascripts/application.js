@@ -19,6 +19,8 @@
 //= require angular-ui-calendar
 //= require angular-flash.min
 //= require moment
+//= require spin
+//= require angular-spinner
 //= require fullcalendar
 //= require underscore
 //= require home

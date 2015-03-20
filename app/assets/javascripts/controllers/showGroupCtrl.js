@@ -1,7 +1,18 @@
-calendarApp.controller('showGroupCtrl', ['$location', '$scope', 'groupData', '$routeParams', '$q',
- function($location, $scope, groupData, $routeParams, $q){
+calendarApp.controller('showGroupCtrl', ['$location', '$scope', 'groupData', '$routeParams', '$q', 'Auth',
+ function($location, $scope, groupData, $routeParams, $q, Auth){
   console.log('inside showGroupCtrl')
   $scope.groups = groupData.data;
+
+  $scope.home = function() {
+    $location.url('/');
+  }
+
+  $scope.logout = function() {
+    Auth.logout().then(function(currentUser){
+    }, function(error) {
+
+    });
+  }
   
   $scope.group = null
   $scope.findGroup = function(){
