@@ -1,8 +1,13 @@
 var mainCtrl = calendarApp.controller('mainCtrl', ['$scope', '$location', 'Auth', function($scope, $location, Auth){
-  console.log('inside main controller')
 
-  $scope.authenticate = function() {
-    
+  $scope.isNotLoggedIn = function() {
+    if(Auth.isAuthenticated() == false)
+      return true;
+  }
+
+  $scope.isLoggedIn = function() {
+    if(Auth.isAuthenticated() == true)
+      return true;
   }
 
   $scope.viewGroups = function() {

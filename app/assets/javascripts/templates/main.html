@@ -1,23 +1,23 @@
 <div class="scenic"></div>
 <h3>Simple Calendar</h3>
 <h6 class="subheader">Social - Productive - Easy</h6>
-<hr>
-<span>
+<hr ng-hide="isNotLoggedIn()">
+<span ng-hide="isNotLoggedIn()">
   <i class="fi-trash"></i>
-  <a ng-click="logout()" ng-hide="Auth.isAuthenticated()">Log-Out</a>
+  <a ng-click="logout()">Log-Out</a>
 </span>
-<hr>
-<span>
+<hr ng-hide="isLoggedIn()">
+<span ng-hide="isLoggedIn()">
   <i class="fi-torsos"></i>
   <a ng-click="signUp()">Sign-Up</a>
 </span>
-<hr>
-<span>
+<hr ng-hide="isLoggedIn()">
+<span ng-hide="isLoggedIn()">
   <i class="fi-male-female"></i>
   <a ng-click="login()">Log-In</a>
 </span>
 <hr>
-<span>
+<span ng-hide="isNotLoggedIn()">
   <i class="fi-magnifying-glass"></i>
   <a ng-click="viewGroups()">View Groups</a>
 </span>
