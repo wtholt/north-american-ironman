@@ -9,6 +9,10 @@ RSpec.describe EventsController, type: :controller do
     FactoryGirl.create(:event)
   }
 
+  # let!(:user){
+  #   FactoryGirl.create(:user)
+  # }
+
   describe 'GET #index' do
     it 'should return all events' do
       get :index, format: :json, group_id: group
