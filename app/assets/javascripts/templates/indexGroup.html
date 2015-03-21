@@ -7,6 +7,10 @@
   <a ng-click='createNewGroup()'>Create new group</a>
 </span>
 <hr>
+<div class="spinner" ng-show="loading()">
+  <span us-spinner>
+  </span>
+</div>
 <ul>
   <li ng-repeat="group in groups.groups">
     <a ng-click="showGroup(group.id)"><strong>{{ group.name }}</strong></a>

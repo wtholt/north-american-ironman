@@ -1,4 +1,4 @@
-var indexGroupCtrl = calendarApp.controller('indexGroupCtrl', ['$scope', 'groupData', '$location', function($scope, groupData, $location){
+var indexGroupCtrl = calendarApp.controller('indexGroupCtrl', ['$scope', 'groupData', '$location', '$q', function($scope, groupData, $location, $q){
   console.log('inside indexGroupCtrl');
   $scope.groups = groupData.data;
   $scope.formGroupName = '';

@@ -2,14 +2,10 @@
   <div class="small-12 columns">
     <div ng-controller="navbarCtrl">
       <nav class="top-bar" data-topbar role="navigation">
-        <ul class="left">
-          <li>
-            <a ng-click="home()">Home</a>
-            <i class="fi-home"></i>
-          </li>
-        </ul>
         <ul class="right">
             <li class="has-dropdown">
+              <a ng-click="home()">Home</a>
+              <i class="fi-home"></i>
               <a ng-click="signUp()" ng-hide="isNotLoggedIn()">Sign-Up</a>
               <i class="fi-torsos" ng-hide="isNotLoggedIn()"></i>
               <a ng-click="login()" ng-hide="isNotLoggedIn()">Log-In</a>

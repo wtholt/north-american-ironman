@@ -1,4 +1,4 @@
-calendarApp.factory('groupData',['$http', '$routeParams', function($http, $routeParams){
+calendarApp.factory('groupData',['$http', '$routeParams', '$q', function($http, $routeParams, $q){
   groupData = {
     data: {
       groups: [
@@ -6,7 +6,6 @@ calendarApp.factory('groupData',['$http', '$routeParams', function($http, $route
     },
     isLoaded: false
   }
-
   groupData.loadGroups = function(){
     if(groupData.isLoaded == false){
       $http.get('/groups.json').success(function(groupsFromServer){
