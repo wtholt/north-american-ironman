@@ -1,10 +1,11 @@
 <!-- <div class="train"></div> -->
 <h4>Log-In</h4>
-<form ng-submit="submitLogInForm()">
-  <input type="email", placeholder="Email", ng-model="formSignUpEmail">
-  <input type="password", placeholder="Password", ng-model="formSignUpPassword">
+<form name="userForm" ng-submit="submitLogInForm(userForm.$valid)" novalidate>
+  <input type="email" name="email" placeholder="Email" ng-model="formSignUpEmail" required>
+  <label ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="error">Enter a valid email</label>
+  <input type="password" name="password" placeholder="Password" ng-model="formSignUpPassword" required>
   <span>
-    <input type="submit" class="button tiny success">
+    <input type="submit" class="button tiny success" ng-disabled="userForm.$invalid">
     <a ng-click="cancel()", class="button tiny alert">Cancel</a>
   </span>
 </form>

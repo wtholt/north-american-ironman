@@ -1,11 +1,17 @@
 <h4>Sign-Up</h4>
-<form ng-submit="submitSignUpForm()">
-  <input type="text", placeholder="Name", ng-model="formSignUpName">
-  <input type="email", placeholder="Email", ng-model="formSignUpEmail">
-  <input type="password", placeholder="Password", ng-model="formSignUpPassword">
-  <input type="password", placeholder="Password Confirmation", ng-model="formSignUpPasswordConfirmation">
+<form name="signUp" ng-submit="submitSignUpForm(signUp.$valid)" novalidate>
+  <input type="text" name="name" placeholder="Name" ng-model="formSignUpName" ng-minlength="3" ng-maxlength="20">
+  <label ng-show="signUp.name.$error.minlength" class="error">Name is too short</label>
+  <label ng-show="signUp.name.$error.maxlength" class="error">Name is too long</label>
+
+
+  <input type="email" name="email" placeholder="Email" ng-model="formSignUpEmail" required>
+  <label ng-show="signUp.email.$invalid && !signUp.email.$pristine" class="error">Enter a valid email</label>
+
+  <input type="password" placeholder="Password" ng-model="formSignUpPassword" required>
+  <input type="password" placeholder="Password Confirmation" ng-model="formSignUpPasswordConfirmation" required>
   <span>
-    <input type="submit" class="button tiny success">
-    <a ng-click="cancel()", class="button tiny alert">Cancel</a>
+    <input type="submit" class="button tiny success" ng-disabled="signUp.$invalid">
+    <a ng-click="cancel()" class="button tiny alert">Cancel</a>
   </span>
 </form>

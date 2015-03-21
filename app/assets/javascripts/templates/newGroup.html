@@ -1,16 +1,17 @@
 <h4>Add Group</h4>
 <hr>
-<form ng-submit="submitGroupForm()">
-  <input type="text", placeholder="Name", ng-model="formGroupName">
+<form name="groupForm" ng-submit="submitGroupForm(groupForm.$valid)" novalidate>
+  <input type="text", placeholder="Name", ng-model="formGroupName" required>
   <br>
-  <textarea placeholder="Info", ng-model="formGroupInfo"></textarea>
+  <textarea placeholder="Info", ng-model="formGroupInfo" required></textarea>
   <br>
-  <input type="text", placeholder="City", ng-model="formGroupCity">
+  <input type="text", placeholder="City", ng-model="formGroupCity" required>
   <br>
-  <input type="text", placeholder="State", ng-model="formGroupState">
+  <input type="text", placeholder="State", ng-model="formGroupState" required>
   <br>
-  <input type="text", placeholder="Zip Code", ng-model="formGroupZip">
+  <input type="text", placeholder="Zip Code", ng-model="formGroupZip" required>
   <span>
-    <input type="submit" class="button tiny success"> <a ng-click="groupIndex()" class="button tiny alert">Cancel</a>
+    <input type="submit" class="button tiny success" ng-disabled="groupForm.$invalid"> 
+    <a ng-click="groupIndex()" class="button tiny alert">Cancel</a>
   </span>
 </form>

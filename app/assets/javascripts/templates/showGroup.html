@@ -1,13 +1,16 @@
 <h3>Group Info</h3>
 <hr>
-<a ng-click="groupIndex()">Back to Groups</a>
+<span>
+  <i class="fi-arrow-left"></i>
+  <a ng-click="groupIndex()">Groups</a>
+</span>
 <hr>
 <ul class="vcard">
-  <li class="fn">{{group.name}}</li>
-  <li>{{group.info}}</li>
-  <li class="locality">{{group.city}}</li>
-  <li class="state">{{group.state}}</li>
-  <li class="zip">{{group.zip}}</li>
+  <li class="fn"><label>Name</label>{{group.name}}</li>
+  <li><label>Info</label>{{group.info}}</li>
+  <li class="locality"><label>City</label>{{group.city}}</li>
+  <li class="state"><label>State</label>{{group.state}}</li>
+  <li class="zip"><label>Zip Code</label>{{group.zip}}</li>
   <br>
   <span>
     <i class="fi-plus"></i>

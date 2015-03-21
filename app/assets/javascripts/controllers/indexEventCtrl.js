@@ -10,4 +10,18 @@ var indexEventCtrl = calendarApp.controller('indexEventCtrl', ['$scope', 'eventD
   $scope.showEvent = function(eventId) {
     $location.url('/events/' + eventId)
   }
+
+  $scope.editEvent = function(eventId){
+    $location.url('/events/' + eventId + '/edit')
+  }
+
+  $scope.deleteEvent = function(eventId){
+    eventData.deleteEvent(eventId);
+  }
+
+  $scope.addEvent = function() {
+    $location.url('/groups/' + $routeParams.group_id + '/events/new')
+  }
+
+
 }])

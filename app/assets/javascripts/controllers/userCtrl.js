@@ -6,7 +6,7 @@ function($location, $scope, $routeParams, Auth){
     $location.url('/');
   }
 
-  $scope.submitSignUpForm = function() { 
+  $scope.submitSignUpForm = function() {
     var credentials = {
       name: $scope.formSignUpName,
       email: $scope.formSignUpEmail,
