@@ -7,6 +7,10 @@ function($scope, uiCalendarConfig, $routeParams, eventData, $location){
 
   $scope.eventSources = [eventData.data];
 
+  $scope.showEvent = function(eventId){
+    $location.url('/events/' + eventId)
+  }
+
   $scope.uiConfig = {
     calendar:{
       editable: true,

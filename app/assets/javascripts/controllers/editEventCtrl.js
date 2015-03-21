@@ -17,7 +17,7 @@ $scope.submitEventForm = function(){
   {
     event: {
       id: $routeParams.id,
-      title: $scope.editEvent.name,
+      title: $scope.editEvent.title,
       info: $scope.editEvent.info,
       location: $scope.editEvent.location,
       start: $scope.editEvent.start,

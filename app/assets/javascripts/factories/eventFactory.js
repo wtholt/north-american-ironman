@@ -38,7 +38,8 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
       foundEvent.title = data.title
       foundEvent.info = data.info
       foundEvent.location = data.location
-      foundEvent.date_field = data.start
+      foundEvent.start = data.start
+      foundEvent.end = data.end
       foundEvent.address = data.address
       foundEvent.city = data.city
       foundEvent.state = data.state
