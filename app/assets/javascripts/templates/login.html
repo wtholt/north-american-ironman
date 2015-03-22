@@ -1,6 +1,7 @@
 <!-- <div class="train"></div> -->
 <h4>Log-In</h4>
 <form name="userForm" ng-submit="submitLogInForm(userForm.$valid)" novalidate>
+  <label ng-show="invalid" class="error">Invalid E-Mail/Password</label>
   <input type="email" name="email" placeholder="Email" ng-model="formSignUpEmail" required>
   <label ng-show="userForm.email.$invalid && !userForm.email.$pristine" class="error">Enter a valid email</label>
   <input type="password" name="password" placeholder="Password" ng-model="formSignUpPassword" required>

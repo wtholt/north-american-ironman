@@ -17,7 +17,6 @@ function($location, $scope, $routeParams, Auth){
       $location.url('/');
       console.log(registeredUser);
     }, function(error){
-
     });
   }
 
@@ -30,7 +29,7 @@ function($location, $scope, $routeParams, Auth){
       console.log(user);
       $location.url('/');
     }, function(error){
-
+      $scope.invalid = true;
     });
   }
 

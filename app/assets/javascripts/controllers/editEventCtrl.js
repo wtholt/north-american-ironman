@@ -2,7 +2,6 @@ calendarApp.controller('editEventCtrl', ['$location', '$scope', 'eventData', '$r
 function($location, $scope, eventData, $routeParams, $q){
   console.log('inside editEventCtrl')
 
-
 $scope.editEvent = null;
 $scope.findEvent = function() {
   $scope.editEvent = eventData.findEvent($routeParams.id);
@@ -38,5 +37,9 @@ $scope.submitEventForm = function(){
   $scope.editEvent.zip = '';
   $location.url('/events/' + $routeParams.id)
 }
+
+  $scope.cancel = function(groupId) {
+    $location.url('/groups/' + groupId + '/events')
+  }
 
 }])
