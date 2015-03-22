@@ -22,9 +22,7 @@ class EventsController < ApplicationController
 
   def edit
     @event = Event.find params[:id]
-    respond_to do |format|
-      format.json { render json: @event }
-    end
+    render :json => @event
   end
 
   def create
