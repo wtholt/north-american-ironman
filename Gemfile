@@ -51,6 +51,10 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
+
+gem 'rabl'
+
+gem 'oj'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'angular_rails_csrf'

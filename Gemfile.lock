@@ -138,6 +138,7 @@ GEM
     notiffany (0.0.6)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    oj (2.12.1)
     orm_adapter (0.5.0)
     pg (0.18.1)
     pry (0.10.1)
@@ -146,6 +147,8 @@ GEM
       slop (~> 3.4)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
+    rabl (0.11.6)
+      activesupport (>= 2.3.14)
     rack (1.6.0)
     rack-test (0.6.3)
       rack (>= 1.0)
@@ -289,8 +292,10 @@ DEPENDENCIES
   jquery-rails
   momentjs-rails
   mysql2
+  oj
   pg
   quiet_assets
+  rabl
   rails (= 4.2.0)
   rails-assets-angular-devise
   rails-erd

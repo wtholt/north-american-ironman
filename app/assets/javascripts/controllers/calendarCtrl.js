@@ -7,8 +7,7 @@ function($scope, uiCalendarConfig, $routeParams, eventData, $location){
 
   $scope.eventSources = [eventData.data];
 
-  $scope.showEvent = function(eventId){
-    $location.url('/events/' + eventId)
+  $scope.showEvent = function(){
   }
 
   $scope.uiConfig = {
@@ -21,10 +20,8 @@ function($scope, uiCalendarConfig, $routeParams, eventData, $location){
         center: 'title',
         right: '',
       },
-      eventClick: function(){
-        $scope.$apply(function(){
-          $scope.showEvent();
-        })
+      eventClick: function(eventData, event, view){
+        var content = '<h3>'+eventData.data.title+'</h3>'
       }
     }
   }

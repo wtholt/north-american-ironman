@@ -5,16 +5,11 @@ class EventsController < ApplicationController
     @events = @group.events
     respond_to do |format|
       format.json { render json: @events}
-      format.html
     end
   end
 
   def show 
     @event = Event.find params[:id]
-    respond_to do |format|
-      format.json { render json: @event}
-      format.html
-    end
   end
 
   def new
@@ -22,7 +17,6 @@ class EventsController < ApplicationController
     @event = @group.events.new
     respond_to do |format|
       format.json { render json: @event }
-      format.html
     end
   end
 
@@ -30,7 +24,6 @@ class EventsController < ApplicationController
     @event = Event.find params[:id]
     respond_to do |format|
       format.json { render json: @event }
-      format.html
     end
   end
 
@@ -38,15 +31,7 @@ class EventsController < ApplicationController
     @group = Group.find params[:group_id]
     @event = @group.events.create event_params
     @event.user = current_user
-    respond_to do |format|
-      if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render :show, status: :created, location: @event }
-      else
-        format.html { render :new }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
-      end
-    end
+    render :json => @event
   end
 
   def update
