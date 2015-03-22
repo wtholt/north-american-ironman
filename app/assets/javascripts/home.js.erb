@@ -54,15 +54,15 @@ var calendarApp = angular
       })
       .when('/users/sign_up', {
         controller: 'userCtrl',
-        templateUrl: 'assets/templates/signUp.html'
+        templateUrl: "<%= asset_path ('templates/signUp.html') %>",
       })
       .when('/users/sign_in', {
         controller: 'userCtrl',
-        templateUrl: 'assets/templates/login.html'
+        templateUrl: "<%= asset_path ('templates/login.html') %>",
       })
       .when('/users/sign_out',{
         controller: 'userCtrl',
-        templateUrl: 'assets/templates/main.html'
+        templateUrl: "<%= asset_path ('templates/main.html') %>",
       })
       .otherwise({
         templateUrl: "<%= asset_path ('templates/main.html') %>",
