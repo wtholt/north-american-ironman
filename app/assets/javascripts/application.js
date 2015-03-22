@@ -12,16 +12,18 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery-ui.custom.min
 //= require foundation
 //= require angular
 //= require angular-route
 //= require angular-devise/devise
 //= require calendar
 //= require angular-flash.min
-//= require moment
+//= require moment.min
 //= require spin
 //= require angular-spinner
-//= require fullcalendar
+//= require fullcalendar.min
+//= require gcal
 //= require underscore
 //= require home
 //= require_tree .
