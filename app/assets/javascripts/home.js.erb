@@ -1,11 +1,11 @@
 var calendarApp = angular
   .module('calendarApp', ['ngRoute', 'ui.calendar', 'Devise', 'angular-flash.service', 'angular-flash.flash-alert-directive', 'angularSpinner'])
-  .config(function(AuthProvider){
+  .config(['AuthProvider', function(AuthProvider){
 
-  })
-  .config(function (flashProvider) {
+  }])
+  .config(['flashProvider', function (flashProvider) {
     flashProvider.errorClassnames.push('alert-danger');
-  })
+  }])
   .config(['usSpinnerConfigProvider', function(usSpinnerConfigProvider){
     usSpinnerConfigProvider.setDefaults({
       lines: 6,
