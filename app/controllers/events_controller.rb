@@ -35,15 +35,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find params[:id]
     @event.update_attributes event_params
-    respond_to do |format|
-      if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
-        format.json { render json: @event}
-      else
-        format.html { render :edit }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
-      end
-    end
+    render :json => @event
   end
 
   def destroy

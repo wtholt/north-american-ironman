@@ -19,12 +19,10 @@ calendarApp.factory('eventData', ['$http', '$routeParams', 'moment', function($h
     }
   }
   eventData.findEvent = function(eventId) {
-    console.log(eventData.data.events);
-    _.each(eventData.data.events, function(event){
-      event.start = moment(event.start, "MM-DD-YYYY");
-      event.end = moment(event.end, "MM-DD-YYYY");
-    })
-    console.log(eventData.data.events);
+    // _.each(eventData.data.events, function(event){
+    //   event.start = Date.parse(event.start);
+    //   event.end = Date.parse(event.end);
+    // })
     return _.findWhere( eventData.data.events, {id: parseInt(eventId)})
   }
 
@@ -34,18 +32,12 @@ calendarApp.factory('eventData', ['$http', '$routeParams', 'moment', function($h
 
   eventData.addEvent = function(event) {
     $http.post('/groups/' + $routeParams.group_id + '/events', event).success(function(eventsFromServer){
-      console.log("before", eventsFromServer);
-      _.each(eventsFromServer, function(event) {
-        event.start = new Date(event.start);
-        event.end = new Date(event.end);
-      })
-      console.log("after", eventsFromServer);
       eventData.pushEvent(eventsFromServer);
     })
   }
 
   eventData.updateEvent = function(event) {
-    $http.patch('/events/' + event.event.id, event).success(function(data){
+    $http.patch('/events/' + event.event.id + '.json', event).success(function(data){
       var foundEvent = _.findWhere( eventData.data.events, {id: parseInt(event.event.id)})
       foundEvent.title = data.title
       foundEvent.info = data.info

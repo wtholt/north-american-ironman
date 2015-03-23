@@ -10,7 +10,7 @@ $scope.findEvent = function() {
 $scope.findEvent();
 this.deferred = $q.defer();
 this.deferred.promise.then($scope.findEvent);
-eventData.loadEvents(this.deferred);
+// eventData.loadEvents(this.deferred);
 $scope.submitEventForm = function(){
   eventData.updateEvent(
   {
@@ -19,8 +19,8 @@ $scope.submitEventForm = function(){
       title: $scope.editEvent.title,
       info: $scope.editEvent.info,
       location: $scope.editEvent.location,
-      start: $scope.editEvent.start,
-      end: $scope.editEvent.end,
+      start: new Date($scope.editEvent.start),
+      end: new Date($scope.editEvent.end),
       address: $scope.editEvent.address,
       city: $scope.editEvent.city,
       state: $scope.editEvent.state,
@@ -35,11 +35,11 @@ $scope.submitEventForm = function(){
   $scope.editEvent.city = '';
   $scope.editEvent.state = '';
   $scope.editEvent.zip = '';
-  $location.url('/events/' + $routeParams.id)
+  $location.url('/groups/' + $scope.editEvent.group_id + '/events');
 }
 
   $scope.cancel = function(groupId) {
-    $location.url('/groups/' + groupId + '/events')
+    $location.url('/groups/' + $scope.editEvent.group_id + '/events')
   }
 
 }])
