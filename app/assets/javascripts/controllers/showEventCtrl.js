@@ -9,7 +9,7 @@ function($location, $scope, eventData, $routeParams){
   $scope.findEvent();
 
   $scope.return = function(){
-    $location.url('/groups/' + $routeParams.group_id + '/events')
+    $location.url('/groups/' + $scope.event.group_id + '/events')
   }
 
   $scope.editEvent = function(){

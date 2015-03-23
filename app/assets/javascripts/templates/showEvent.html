@@ -1,4 +1,6 @@
 <h4>Event Info</h4>
+<a ng-click="return()">Return to Group</a>
+<hr>
 <ul class="vcard">
   <li><label>Name</label>{{ event.title }}</li>
   <li><label>Info</label>{{ event.info }}</li>
@@ -8,8 +10,5 @@
   <li><label>City</label>{{ event.city }}</li>
   <li><label>State</label>{{ event.state }}</li>
   <li><label>Zip</label>{{ event.zip }}</li>
-  <a ng-click="editEvent(event.id)">Edit</a>
-  <a ng-click="deleteEvent(event.id)">Delete</a>
 </ul>
 <br>
-<a ng-click="return()">Return</a>

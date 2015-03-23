@@ -38,7 +38,7 @@ $scope.submitEventForm = function(){
   $location.url('/groups/' + $scope.editEvent.group_id + '/events');
 }
 
-  $scope.cancel = function(groupId) {
+  $scope.cancel = function() {
     $location.url('/groups/' + $scope.editEvent.group_id + '/events')
   }
 
