@@ -20,6 +20,7 @@
 //= require calendar
 //= require angular-flash.min
 //= require moment.min
+//= require angular-moment.min
 //= require spin
 //= require angular-spinner
 //= require fullcalendar.min

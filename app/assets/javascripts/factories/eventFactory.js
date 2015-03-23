@@ -1,4 +1,4 @@
-calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $routeParams){
+calendarApp.factory('eventData', ['$http', '$routeParams', 'moment', function($http, $routeParams, moment){
   eventData = {
     data: {
       events: [
@@ -19,6 +19,12 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
     }
   }
   eventData.findEvent = function(eventId) {
+    console.log(eventData.data.events);
+    _.each(eventData.data.events, function(event){
+      event.start = moment(event.start, "MM-DD-YYYY");
+      event.end = moment(event.end, "MM-DD-YYYY");
+    })
+    console.log(eventData.data.events);
     return _.findWhere( eventData.data.events, {id: parseInt(eventId)})
   }
 
@@ -28,6 +34,12 @@ calendarApp.factory('eventData', ['$http', '$routeParams', function($http, $rout
 
   eventData.addEvent = function(event) {
     $http.post('/groups/' + $routeParams.group_id + '/events', event).success(function(eventsFromServer){
+      console.log("before", eventsFromServer);
+      _.each(eventsFromServer, function(event) {
+        event.start = new Date(event.start);
+        event.end = new Date(event.end);
+      })
+      console.log("after", eventsFromServer);
       eventData.pushEvent(eventsFromServer);
     })
   }
