@@ -31,7 +31,7 @@ calendarApp.factory('eventData', ['$http', '$routeParams', 'moment', function($h
   }
 
   eventData.addEvent = function(event) {
-    $http.post('/groups/' + $routeParams.group_id + '/events', event).success(function(eventsFromServer){
+    $http.post('/groups/' + $routeParams.group_id + '/events.json', event).success(function(eventsFromServer){
       eventData.pushEvent(eventsFromServer);
     })
   }

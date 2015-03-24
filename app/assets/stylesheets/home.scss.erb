@@ -1,9 +1,13 @@
 body {
   font-family: 'Lato', sans-serif;
-  background-color: snow;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h2, h3, h4, h5, h6 {
   font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-family: 'Ubuntu', sans-serif;
 }
 
 .fc h1 {
@@ -12,6 +16,11 @@ h1, h2, h3, h4, h5, h6 {
 .small-8.columns {
   height: 100%;
   border-right: 3px solid black;
+  border-top: 3px solid black;
+}
+
+.small-4.columns {
+  border-top: 3px solid black;
 }
 
 .footer {
@@ -46,7 +55,7 @@ li {
 }
 
 .top-bar {
-  background-color: snow;
+  background-color: #fff;
 }
 
 .spinner {
@@ -58,4 +67,52 @@ li {
 .fc-header{
   font-family: 'Lato', sans-serif;
 }
+
+th.fc-day-header.fc-widget-header.fc-thu{
+  background-color: #fff;
+}
+
+th.fc-day-header.fc-widget-header.fc-fri{
+  background-color: #fff;
+}
+
+th.fc-day-header.fc-widget-header.fc-sat{
+  background-color: #fff;
+}
+
+th.fc-day-header.fc-widget-header.fc-sun{
+  background-color: #fff;
+  color: red;
+}
+
+th.fc-day-header.fc-widget-header.fc-mon{
+  background-color: #fff;
+}
+
+th.fc-day-header.fc-widget-header.fc-tue{
+  background-color: #fff;
+}
+
+th.fc-day-header.fc-widget-header.fc-wed{
+  background-color: #fff;
+}
+
+td.fc-day-number.fc-sun {
+  color: red;
+}
+
+td.fc-widget-header {
+  background-color: #fff;
+}
+
+.water {
+  background-image: url("<%= asset_path('desk.jpg') %> ");
+  background-image: no-repeat;
+  background-size: cover;
+  background-position: 100% 5%;
+  padding: 150px 15px;
+  margin-bottom: 30px;
+  color: inherit;
+}
+
 

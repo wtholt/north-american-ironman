@@ -8,12 +8,13 @@
   <i class="fi-arrow-left"></i>
   <a ng-click="returnToGroup()">Return to Group</a>
 </span>
-<ul class="inline-list">
+<ul class="v-card">
   <li ng-repeat="event in events.events">
     <a ng-click="showEvent(event.id)"><strong>{{ event.title }}</strong></a>
     <span>
       <a ng-click="editEvent(event.id)"><i class="fi-pencil"></i></a>
       <a ng-click="deleteEvent(event.id)"><i class="fi-trash"></i></a>
     </span>
+    <hr>
   </li>
 </ul>
