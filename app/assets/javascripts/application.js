@@ -23,7 +23,7 @@
 //= require angular-moment.min
 //= require spin
 //= require angular-spinner
-//= require fullcalendar.min
+//= require fullcalendar
 //= require gcal
 //= require underscore
 //= require home

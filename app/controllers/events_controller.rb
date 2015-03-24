@@ -29,6 +29,7 @@ class EventsController < ApplicationController
     @group = Group.find params[:group_id]
     @event = @group.events.create event_params
     @event.user = current_user
+    @event.save
     render :json => @event
   end
 

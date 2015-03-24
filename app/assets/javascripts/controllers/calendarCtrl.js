@@ -7,8 +7,16 @@ function($scope, uiCalendarConfig, $routeParams, eventData, $location){
 
   $scope.eventSources = [eventData.data];
 
+  $scope.editEvent = function(eventId){
+    $location.url('/events/' + eventId + '/edit')
+  }
+
   $scope.showEvent = function(eventId){
     $location.url('/events/' + eventId);
+  }
+
+  $scope.showGroup = function(groupId){
+    $location.url('/groups/' + groupId + '/events')
   }
 
   $scope.uiConfig = {
@@ -21,9 +29,12 @@ function($scope, uiCalendarConfig, $routeParams, eventData, $location){
         center: 'title',
         right: '',
       },
-      eventClick: function(event){
+      eventClick: function(event) {
         $scope.showEvent(event.id);
-      }
+      },
+      // eventMouseover: function(event){
+      //   $scope.showEvent(event.id);
+      // },
     }
   }
 }])
