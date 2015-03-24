@@ -12,13 +12,13 @@ function($location, $scope, eventData, $routeParams){
     $location.url('/groups/' + $scope.event.group_id + '/events')
   }
 
-  $scope.editEvent = function(){
+  $scope.edit = function(){
     $location.url('/events/' + $routeParams.id + '/edit')
   }
 
-  $scope.deleteEvent = function(eventId){
+  $scope.delete = function(eventId){
     eventData.deleteEvent(eventId);
-    $location.url('/groups/' + $routeParams.group_id + '/events')
+    $location.url('/groups/' + $scope.event.group_id + '/events')
   }
 
 

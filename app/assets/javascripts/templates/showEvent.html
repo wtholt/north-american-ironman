@@ -10,5 +10,9 @@
   <li><label>City</label>{{ event.city }}</li>
   <li><label>State</label>{{ event.state }}</li>
   <li><label>Zip</label>{{ event.zip }}</li>
+  <span>
+    <a ng-click="edit()"><i class="fi-pencil"></i></a>
+    <a ng-click="delete(event.id)"><i class="fi-trash"></i></a>
+  </span>
 </ul>
 <br>
