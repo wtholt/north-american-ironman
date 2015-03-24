@@ -1,5 +1,5 @@
-calendarApp.controller('navbarCtrl', ['$location', '$scope', 'Auth',
-function($location, $scope, Auth){
+calendarApp.controller('navbarCtrl', ['$location', '$scope', 'Auth', '$route', 'eventData',
+function($location, $scope, Auth, $route, eventData){
   console.log('inside navbar');
 
   $scope.isLoggedIn = function() {
@@ -17,6 +17,7 @@ function($location, $scope, Auth){
     }, function(error) {
 
     });
+    eventData.data.events = []
     $location.url('/');
   }
 
