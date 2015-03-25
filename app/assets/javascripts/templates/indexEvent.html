@@ -11,6 +11,9 @@
 <ul class="v-card">
   <li ng-repeat="event in events.events">
     <a ng-click="showEvent(event.id)"><strong>{{ event.title }}</strong></a>
+    <br>
+    <strong>{{ event.start }}</strong>
+    <br>
     <span>
       <a ng-click="editEvent(event.id)"><i class="fi-pencil"></i></a>
       <a ng-click="deleteEvent(event.id)"><i class="fi-trash"></i></a>
